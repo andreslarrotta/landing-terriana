@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Terriana - Landscape Design and Build</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <script src="script.js" defer></script>    
+</head>
+<body>
+    <header>
+  <div class="logo-text">
+    <a href="index.html" class="brand-link">
+      <img src="imagenes/LOGO/LOGO TERRIANA BLANCO.png" alt="logo" class="logo">
+      <div class="brand">
+        <h1>Terriana</h1>
+        <h2>Landscape Design & Build</h2>
+      </div>
+    </a>
+  </div>
+
+  <!-- BOTÓN DE MENÚ RESPONSIVE -->
+  <button class="menu-toggle" aria-label="Abrir menú">
+    <i class="fas fa-bars"></i>
+  </button>
+
+  <!-- MENÚ DE NAVEGACIÓN -->
+  <nav>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="services.html">Services</a></li>
+      <li><a href="Portfolio.html">Portfolio</a></li>
+      <li><a href="about us.html">About Us</a></li>
+      <li><a href="gardening tips.html">Gardening Tips</a></li> 
+      <li><a href="contact us.html" class="contact-btn">Contact Us</a></li>
+    </ul>
+  </nav>
+</header>
+
+    
+    <main>
+    <section>
+      <div class="carousel">
+        <div class="carousel-images" id="carousel-images">
+          <div class="carousel-slide">
+            <img src="imagenes/PHOTOS EDITADAS/TIM AND MICHAEL_1.jpg" alt="imagen1">
+            
+          </div>
+          <div class="carousel-slide">
+            <img src="imagenes/PHOTOS EDITADAS/TIM AND MICHAEL_4.jpg" alt="imagen2">
+            
+          </div>
+          <div class="carousel-slide">
+            <img src="imagenes/PHOTOS EDITADAS/TIM AND MICHAEL_3.jpg" alt="imagen3">
+            
+          </div>
+          <div class="carousel-slide">
+            <img src="imagenes/PHOTOS EDITADAS/IMG_1244.JPG" alt="imagen4">
+            
+          </div>
+          <div class="carousel-slide">
+            <img src="imagenes/PHOTOS EDITADAS/TIM AND MICHAEL_5.jpg" alt="imagen5">
+            
+          </div>
+          <div class="carousel-slide">
+            <img src="imagenes/PHOTOS EDITADAS/RENDER_PROYECTO_1.jpg" alt="imagen6">
+            
+          </div>
+          <div class="carousel-slide">
+            <img src="imagenes/PHOTOS EDITADAS/WENDY_3.JPG" alt="imagen7">
+          </div>
+    </div>
+        <!-- Botones de navegación -->
+       <button class="carousel-button prev" onclick="prevMainSlide()">
+        <i class="fa-solid fa-chevron-left"></i>
+      </button>
+      <button class="carousel-button next" onclick="nextMainSlide()">
+        <i class="fa-solid fa-chevron-right"></i>
+      </button>
+
+        
+        <!-- Dots -->
+        <div class="carousel-dots" id="carousel-dots"></div>
+      </div>
+
+
+       <!-- Botón 'See Our Portfolio' -->
+       <a href="Portfolio.html" class="see-portfolio-btn">See Our Portfolio</a>
+      
+
+     
+</section>
+    
+       
+
+   <!-- Cuadrado debajo del carrusel -->
+<div class="specialization-box">
+    <p>At Terriana, we design and build landscapes in California with a sustainable approach, promoting the use of native plants to preserve and create ecosystems. The species we utilize require less water, encourage biodiversity, and create natural habitats for the native wildlife! Our goal is to integrate design and nature to create functional, aesthetic, and durable spaces.</p>
+
+<!-- stickers -->
+<img src="imagenes/stickers/tidy.png" alt="Sticker decorativo" class="sticker-deco">
+<img src="imagenes/stickers/daisy.png" alt="Sticker decorativo Daisy" class="sticker-daisy">
+</div>
+   
+ <!-- Slider flotante entre secciones -->
+<section class="slider2-thumbnails slider-floating">
+  <!-- Slider 1 -->
+  <div class="slider2-image">
+    <div class="slider2-container" data-index="1">
+      <div class="slider2-image-container">
+        <img class="slider2-image-before slider-image" src="imagenes/PHOTOS EDITADAS/IMG_4833.JPG" alt="Antes" />
+        <img class="slider2-image-after slider-image" src="imagenes/PHOTOS EDITADAS/BARBARA_RENDER_1.jpg" alt="Después" />
+        <span class="slider2-label before-label">Before</span>
+        <span class="slider2-label after-label">After</span>
+      </div>
+      <input type="range" min="0" max="100" value="50" class="slider2-slider" />
+      <div class="slider2-slider-line"></div>
+      <div class="slider2-slider-button">
+       <!-- Ícono -->
+        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" viewBox="0 0 256 256">
+          <rect width="256" height="256" fill="none"></rect>
+          <line x1="128" y1="40" x2="128" y2="216" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"></line>
+          <line x1="96" y1="128" x2="16" y2="128" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"></line>
+          <polyline points="48 160 16 128 48 96" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"></polyline>
+          <line x1="160" y1="128" x2="240" y2="128" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"></line>
+          <polyline points="208 96 240 128 208 160" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"></polyline>
+        </svg>
+        </div>
+    </div>
+  </div>
+
+  <!-- Slider 2 -->
+  <div class="slider2-image">
+    <div class="slider2-container" data-index="2">
+      <div class="slider2-image-container">
+        <img class="slider2-image-before slider-image" src="imagenes/PHOTOS EDITADAS/IMG_5673.JPG" alt="Antes" />
+        <img class="slider2-image-after slider-image" src="imagenes/PHOTOS EDITADAS/TIM AND MICHAEL_RENDER.jpg" alt="Después" />
+        <span class="slider2-label before-label">Before</span>
+        <span class="slider2-label after-label">After</span>
+      </div>
+      <input type="range" min="0" max="100" value="50" class="slider2-slider" />
+      <div class="slider2-slider-line"></div>
+      <div class="slider2-slider-button">
+          <!-- Ícono -->
+        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" viewBox="0 0 256 256">
+          <rect width="256" height="256" fill="none"></rect>
+          <line x1="128" y1="40" x2="128" y2="216" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"></line>
+          <line x1="96" y1="128" x2="16" y2="128" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"></line>
+          <polyline points="48 160 16 128 48 96" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"></polyline>
+          <line x1="160" y1="128" x2="240" y2="128" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"></line>
+          <polyline points="208 96 240 128 208 160" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"></polyline>
+        </svg>
+        </div>
+    </div>
+  </div>
+
+  <!-- Slider 3 -->
+  <div class="slider2-image">
+    <div class="slider2-container" data-index="3">
+      <div class="slider2-image-container">
+        <img class="slider2-image-before slider-image" src="imagenes/PHOTOS EDITADAS/WENDY_1.JPG" alt="Antes" />
+        <img class="slider2-image-after slider-image" src="imagenes/PHOTOS EDITADAS/IMG_7479.JPG" alt="Después" />
+        <span class="slider2-label before-label">Before</span>
+        <span class="slider2-label after-label">After</span>
+      </div>
+      <input type="range" min="0" max="100" value="50" class="slider2-slider" />
+      <div class="slider2-slider-line"></div>
+      <div class="slider2-slider-button">
+          <!-- Ícono -->
+        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" viewBox="0 0 256 256">
+          <rect width="256" height="256" fill="none"></rect>
+          <line x1="128" y1="40" x2="128" y2="216" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"></line>
+          <line x1="96" y1="128" x2="16" y2="128" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"></line>
+          <polyline points="48 160 16 128 48 96" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"></polyline>
+          <line x1="160" y1="128" x2="240" y2="128" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"></line>
+          <polyline points="208 96 240 128 208 160" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"></polyline>
+        </svg>
+        </div>
+    </div>
+  </div>
+</section>
+
+
+
+  
+<!-- Sección our services home -->
+<section class="services2-section">
+    <div class="services2-text">
+      <h2>Our services</h2>
+      <p>
+        We specialize in landscape design and build, including hardscaping, irrigation, professional consulting, vegetable gardens, decks, and fencing.
+      </p>
+      <a href="services.html" class="btn">See our services</a>
+    </div>
+  
+    <div class="carousel2">
+        <div class="carousel2-images" id="carousel2Images">
+          <div class="carousel2-slide">
+            <img src="imagenes/PHOTOS EDITADAS/IMG_1324.JPG" alt="Design">
+            <div class="carousel2-caption">Design</div>
+          </div>
+          <div class="carousel2-slide">
+            <img src="imagenes/PHOTOS EDITADAS/WENDY_7.JPG" alt="Build">
+            <div class="carousel2-caption">Build</div>
+          </div>
+          <div class="carousel2-slide">
+            <img src="imagenes/PHOTOS EDITADAS/IMG_1237.JPG" alt="Hardscaping">
+            <div class="carousel2-caption">Hardscaping</div>
+          </div>
+          <div class="carousel2-slide">
+            <img src="imagenes/PHOTOS EDITADAS/TIM AND MICHAEL_4.jpg" alt="Irrigation">
+            <div class="carousel2-caption">Irrigation</div>
+          </div>
+          <div class="carousel2-slide">
+            <img src="imagenes/PHOTOS EDITADAS/RENDER1.jpg" alt="Decking and fencing">
+            <div class="carousel2-caption">Decking and fencing</div>
+          </div>
+          <div class="carousel2-slide">
+            <img src="imagenes/PHOTOS EDITADAS/TIM AND MICHAEL_6.jpg" alt="Vegetables gardens">
+            <div class="carousel2-caption">Vegetables gardens</div>
+          </div>
+          <div class="carousel2-slide">
+            <img src="imagenes/PHOTOS EDITADAS/IMG_1226.JPG" alt="Professional consulting">
+            <div class="carousel2-caption">Professional consulting</div>
+          </div>
+    </div>
+        <!-- Botones de navegación -->
+       <button class="carousel2-button prev" onclick="prevServiceSlide()">
+          <i class="fa-solid fa-chevron-left"></i>
+        </button>
+        
+        <button class="carousel2-button next" onclick="nextServiceSlide()">
+          <i class="fa-solid fa-chevron-right"></i>
+        </button>
+        <!-- Dots -->
+        <div class="carousel2-dots" id="carousel2dots"></div>
+      </div>
+</section>
+
+      <section class="gardening-section">
+      
+        <h2 class="section-title">Gardening Tips</h2>
+        <div class="gardening-grid">
+          <div class="gardening-card">
+            <img src="imagenes/Adapting to season.webp" alt="Adapting to Seasons">
+            <p class="card-title">Adapting to Seasons</p>
+          </div>
+          <div class="gardening-card">
+            <img src="imagenes/sun protection.jpg" alt="Sun Protection">
+            <p class="card-title">Sun Protection</p>
+          </div>
+          <div class="gardening-card">
+            <img src="imagenes/pest cpntrpñ.jpeg" alt="Pest Control">
+            <p class="card-title">Pest Control</p>
+          </div>
+          <div class="gardening-card">
+            <img src="imagenes/efficiednt watering.jpg" alt="Efficient Watering">
+            <p class="card-title">Efficient Watering</p>
+          </div>
+          <div class="gardening-card">
+            <img src="imagenes/using compost.jpg" alt="Using Compost">
+            <p class="card-title">Using Compost</p>
+          </div>
+          <div class="gardening-card">
+            <img src="imagenes/native plant selection.jpg" alt="Native Plant Selection">
+            <p class="card-title">Native Plant Selection</p>
+          </div>
+        </div>
+                <!-- Sticker justo después del grid -->
+                <div class="gardening-sticker-container">
+                <img src="imagenes/stickers/kanguroo.png" alt="Sticker kanguroo" class="gardening-sticker">
+                <img src="imagenes/stickers/lavanda.png" alt="Sticker kanguroo" class="sticker-lavanda">
+                <img src="imagenes/stickers/ceanothus diamond.png" alt="Sticker kanguroo" class="sticker-ceanothus">
+                </div>
+
+                <!-- Botón -->
+
+                <div class="gardening-button-container">
+                <a href="gardening tips.html" class="gardening-button">Gardening Tips</a>
+                </div>
+      </section>
+
+
+      
+<section class="hero-section">
+  <img src="imagenes/PHOTOS EDITADAS/TIM AND MICHAEL_3.jpg" alt="Fondo jardín" class="hero-bg-img">
+  <div class="hero-overlay">
+    <h1 class="hero-title">Terriana Landscape<br>Design &amp; Build</h1>
+    <p class="hero-description">
+      At Terriana, we design and build landscapes that are both beautiful and environmentally responsible. Our work combines creativity, purpose, and a deep respect for nature to bring meaningful outdoor spaces to life.
+    </p>
+    <p class="hero-description">
+      If you’re interested in working with us, simply click the button below to get in touch — we’d love to hear about your ideas and explore how we can bring them to life together.
+    </p>
+    <a href="contact us.html" class="hero-button">Contact us</a>
+  </div>
+</section>
+
+
+
+      
+    
+    
+    </main>
+    
+    <footer>
+      <div class="footer-content">
+        <div class="footer-logo">
+          <img src="imagenes/LOGO/LOGO TERRIANA BLANCO.png" alt="Logo de Terriana">
+        </div>
+        <h2>Terriana</h2>
+        <p>Landscape Design & Build</p>
+        <p>California, CA</p>
+        
+        <div class="footer-socials">
+          <a href="#" aria-label="Houzz" class="social-icon"><i class="fab fa-houzz"></i></a>
+          <a href="#" aria-label="Instagram" class="social-icon"><i class="fab fa-instagram"></i></a>
+          <a href="#" aria-label="TikTok" class="social-icon"><i class="fab fa-tiktok"></i></a>
+          <a href="#" aria-label="Facebook" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+        </div>
+      </div>
+    </footer>
+    
+  
+   
+  </body>
+</html>
+
