@@ -119,8 +119,32 @@ document.querySelectorAll('.slider2-container').forEach(container => {
     container.style.setProperty('--position', `${value}%`);
   }
 
+
   slider.addEventListener('input', (e) => {
     updateSlider(e.target.value);
+  });
+
+  slider.addEventListener('mouseleave', (e) => {
+    const currentValue = parseFloat(e.target.value);
+    const targetValue = 50;
+    const step = currentValue > targetValue ? -1 : 1;
+    const interval = 16; // ~60fps para animación fluida
+
+    const animateToCenter = () => {
+      const newValue = parseFloat(e.target.value) + step;
+
+      if ((step > 0 && newValue >= targetValue) || (step < 0 && newValue <= targetValue)) {
+        e.target.value = targetValue;
+        updateSlider(targetValue);
+        return;
+      }
+
+      e.target.value = newValue;
+      updateSlider(newValue);
+      requestAnimationFrame(animateToCenter);
+    };
+
+    animateToCenter();
   });
 
   updateSlider(slider.value);
@@ -175,60 +199,48 @@ document.querySelectorAll('.slider2-container').forEach(container => {
   }
 })();
 
-//FORMULARIO
-  const steps = document.querySelectorAll(".form-step");
-  const nextBtns = document.querySelectorAll(".next-btn");
-  const backBtns = document.querySelectorAll(".back-btn");
-  const stepIndicator = document.getElementById("stepIndicator");
 
-  let currentStep = 0;
+const toggle = document.querySelector('.menu-toggle');
+const navLinks = document.querySelector('.nav-links');
 
-  function showStep(stepIndex) {
-    steps.forEach((step, i) => {
-      step.classList.toggle("active", i === stepIndex);
-    });
-    stepIndicator.textContent = `Question ${stepIndex + 1} of ${steps.length}`;
-  }
+console.log(toggle);
 
-  nextBtns.forEach(btn => {
-    btn.addEventListener("click", () => {
-      if (currentStep < steps.length - 1) {
-        currentStep++;
-        showStep(currentStep);
-      }
-    });
-  });
-
-  backBtns.forEach(btn => {
-    btn.addEventListener("click", () => {
-      if (currentStep > 0) {
-        currentStep--;
-        showStep(currentStep);
-      }
-    });
-  });
-
-  showStep(currentStep);
-
-
- document.addEventListener('DOMContentLoaded', () => {
-  const toggle = document.querySelector('.menu-toggle');
-  const navLinks = document.querySelector('.nav-links');
-
-  if (toggle && navLinks) {
-    toggle.addEventListener('click', () => {
-      navLinks.classList.toggle('active');
-    });
-  }
+toggle.addEventListener('click', () => {
+  console.log('click');
+  navLinks.classList.toggle('active');
 });
 
+//FORMULARIO
+const steps = document.querySelectorAll(".form-step");
+const nextBtns = document.querySelectorAll(".next-btn");
+const backBtns = document.querySelectorAll(".back-btn");
+const stepIndicator = document.getElementById("stepIndicator");
 
-  document.addEventListener('DOMContentLoaded', () => {
-    const toggle = document.querySelector('.menu-toggle');
-    const navLinks = document.querySelector('.nav-links');
+let currentStep = 0;
 
-    toggle.addEventListener('click', () => {
-      navLinks.classList.toggle('active');
-    });
+function showStep(stepIndex) {
+  steps.forEach((step, i) => {
+    step.classList.toggle("active", i === stepIndex);
   });
+  stepIndicator.textContent = `Question ${stepIndex + 1} of ${steps.length}`;
+}
 
+nextBtns.forEach(btn => {
+  btn.addEventListener("click", () => {
+    if (currentStep < steps.length - 1) {
+      currentStep++;
+      showStep(currentStep);
+    }
+  });
+});
+
+backBtns.forEach(btn => {
+  btn.addEventListener("click", () => {
+    if (currentStep > 0) {
+      currentStep--;
+      showStep(currentStep);
+    }
+  });
+});
+
+showStep(currentStep);
