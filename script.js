@@ -203,8 +203,6 @@ document.querySelectorAll('.slider2-container').forEach(container => {
 const toggle = document.querySelector('.menu-toggle');
 const navLinks = document.querySelector('.nav-links');
 
-console.log(toggle);
-
 toggle.addEventListener('click', () => {
   console.log('click');
   navLinks.classList.toggle('active');
