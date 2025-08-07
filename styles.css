@@ -90,7 +90,7 @@ nav ul li {
 }
 
 /* Para pantallas pequeñas */
-@media (max-width: 768px) {
+@media (max-width: 900px) {
   .menu-toggle {
     display: block;
     background: none;
@@ -154,6 +154,10 @@ nav ul li a:active {
 }
 
 /* Carrusel completo */
+.carousel-main {
+  position: relative;
+}
+
 .carousel {
   position: relative;
   overflow: hidden;
@@ -269,7 +273,7 @@ nav ul li a:active {
     background-color 0.3s ease,
     color 0.3s ease;
   position: absolute;
-  top: 100%;
+  bottom: 14%;
   left: 50%;
   transform: translateX(-50%);
 }
@@ -290,6 +294,7 @@ nav ul li a:active {
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
 }
 
 /* Estilo para el texto dentro de la caja */
@@ -323,7 +328,7 @@ nav ul li a:active {
 }
 
 /* Ajuste para que sea responsive */
-@media (max-width: 768px) {
+@media (max-width: 900px) {
   .specialization-box p {
     line-height: 1.6;
   }
@@ -353,9 +358,10 @@ nav ul li a:active {
   }
 
   .see-portfolio-btn {
-    bottom: 34%;
-    top: auto;
+    bottom: 21% !important;
     font-size: 0.8em;
+    position: absolute;
+    top: auto;
   }
 
   .specialization-box {
@@ -996,6 +1002,7 @@ nav ul li a:active {
   color: #4c6534;
   transition: background-color 0.3s ease;
   margin: 50px 0;
+  z-index: 99999999;
 }
 
 .hero-button:hover {
@@ -1120,7 +1127,7 @@ nav ul li a:active {
 .carousel3 {
   position: relative;
   overflow: hidden;
-  width: 100vw;
+  width: 100%;
   height: 100vh;
   display: flex;
   justify-content: center;
@@ -1686,10 +1693,17 @@ nav ul li a:active {
 /* PAGINA PORTFOLIO */
 /* Estilos para slider2 */
 .pantalla-completa-vacia {
-  width: 100vw;
+  position: relative;
+  width: 100%;
   height: 100vh;
   background-color: #fff8ee;
+  overflow: hidden;
 }
+
+.pantalla-completa-vacia .slider2-thumbnails {
+  position: relative !important;
+}
+
 .slider2-thumbnails {
   display: flex;
   justify-content: center;
@@ -1701,11 +1715,12 @@ nav ul li a:active {
 
 .slider2-image {
   width: 350px;
-  height: 300px;
+  height: 350px;
   display: flex;
   justify-content: center;
   align-items: center;
   margin: 0 20px;
+  flex-direction: column;
 }
 
 .slider2-container {
@@ -1810,23 +1825,23 @@ body {
 
 /* Botón 'See more PORTFOLIO' */
 .see-more-btn1 {
-  display: inline-block;
   background-color: #6b882c;
   color: #fff8e3;
   border: none;
   border-radius: 20px;
-  padding: 16px 140px;
-  text-align: center;
+  padding: 8px 0;
+  width: 100%;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   font-size: 1.1em;
   font-weight: bold;
+  margin-top: 20px;
   text-decoration: none;
   transition:
     background-color 0.3s ease,
     color 0.3s ease;
-  position: absolute;
-  top: 110%;
-  left: 15%;
-  transform: translateX(-50%);
 }
 
 /* Efecto hover para cambiar el fondo y mantener el texto verde */
@@ -2057,9 +2072,13 @@ body {
     gap: 60px;
   }
 
+  .pantalla-completa-vacia .slider2-thumbnails {
+    position: initial !important;
+  }
+
   /* Organización vertical de sliders */
   .slider2-thumbnails {
-    position: static;
+    position: static !important;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -2201,11 +2220,7 @@ body {
   transition:
     background-color 0.3s ease,
     color 0.3s ease;
-  position: absolute;
-  top: 100%;
-  left: 50%;
-  transform: translateX(-50%);
-  margin-top: 1050px;
+  margin-top: 40px;
 }
 .getintouch-btn:hover {
   background-color: #f7ce13;
@@ -2241,16 +2256,11 @@ body {
     display: none;
   }
 }
-@media (max-width: 768px) {
-  .getintouch-btn {
-    margin-top: 950px; /* ⬅️ Ajusta este número según cuánto quieras subirlo */
-  }
-}
 
 /* GARDENING TIPS */
 .fullscreen-image-section {
   position: relative;
-  width: 100vw;
+  width: 100%;
   height: 100vh;
   overflow: hidden;
 }
